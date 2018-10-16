@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "79861f1c-1671-4efa-ab31-8e4c56bee4cb",
+    "name": "Via",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "/products",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "iMac",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "1299",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{API_BASE_URL}}/products",
+              "host": ["{{API_BASE_URL}}"],
+              "path": ["products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/products",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "iMac 4",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "1299",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{API_BASE_URL}}/products/5bb22715b3a1cc839e0ccb26",
+              "host": ["{{API_BASE_URL}}"],
+              "path": ["products", "5bb22715b3a1cc839e0ccb26"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/products/:id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "{{API_BASE_URL}}/products/5bb25c760465e9b7e35f1cd1",
+              "host": ["{{API_BASE_URL}}"],
+              "path": ["products", "5bb25c760465e9b7e35f1cd1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/products",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{API_BASE_URL}}/products/5bb22715b3a1cc839e0ccb26",
+              "host": ["{{API_BASE_URL}}"],
+              "path": ["products", "5bb22715b3a1cc839e0ccb26"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "65c9d5c3-643d-4425-828a-482edcd40473",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "c128f48f-0236-4636-9751-d06c6d1a6968",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "edcf0b7a-84b4-42b7-b4b9-ce3723e45c2d",
+      "key": "API_BASE_URL",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
